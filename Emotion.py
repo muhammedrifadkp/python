@@ -17,6 +17,9 @@ CLICK_COOLDOWN = 0.8 # Seconds between clicks
 EYE_AR_THRESH = 0.20 # Increased threshold for easier detection
 # ---------------------------------------
 
+
+
+
 class HandControlApp:
     def __init__(self, root):
         self.root = root
@@ -49,7 +52,7 @@ class HandControlApp:
             min_detection_confidence=0.7,
             min_tracking_confidence=0.7
         )
-        
+        # face
         # Mediapipe Face Mesh Init (For Eyes)
         self.mp_face_mesh = mp.solutions.face_mesh
         self.face_mesh = self.mp_face_mesh.FaceMesh(
